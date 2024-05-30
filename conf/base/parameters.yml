@@ -1,0 +1,3 @@
+raw_data_path: data/01_raw/tonal_exams.csv
+run_id: 3a60a4519d054ccfa91ae50c06f733a3
+path_scaler: data/02_intermediate/scaler.pickle

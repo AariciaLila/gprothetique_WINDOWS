@@ -1,0 +1,84 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+#
+# We support interacting with a variety of data stores including local file systems, cloud, network and HDFS
+#
+# An example data set definition can look as follows:
+#
+#bikes:
+#  type: pandas.CSVDataset
+#  filepath: "data/01_raw/bikes.csv"
+#
+#weather:
+#  type: spark.SparkDataset
+#  filepath: s3a://your_bucket/data/01_raw/weather*
+#  file_format: csv
+#  credentials: dev_s3
+#  load_args:
+#    header: True
+#    inferSchema: True
+#  save_args:
+#    sep: '|'
+#    header: True
+#
+#scooters:
+#  type: pandas.SQLTableDataset
+#  credentials: scooters_credentials
+#  table_name: scooters
+#  load_args:
+#    index_col: ['name']
+#    columns: ['name', 'gear']
+#  save_args:
+#    if_exists: 'replace'
+#    # if_exists: 'fail'
+#    # if_exists: 'append'
+#
+# The Data Catalog supports being able to reference the same file using two different Dataset implementations
+# (transcoding), templating and a way to reuse arguments that are frequently repeated. See more here:
+# https://docs.kedro.org/en/stable/data/data_catalog.html
+
+raw_daily_data:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/companies.csv
+
+shaped_datas:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/shaped_data.csv
+
+train_data:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/train_data.csv
+
+train_labels:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/train_labels.csv
+
+test_data:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/test_data.csv
+
+test_labels:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/test_labels.csv
+
+regressor:
+  type: pickle.PickleDataset
+  filepath: data/06_models/regressor.pickle
+  versioned: true
+
+scaler:
+  type: pickle.PickleDataset
+  filepath: data/02_intermediate/scaler.pickle
+
+
+data:
+  type: pandas.CSVDataset
+  filepath: data/04_prediction/data.csv
+
+data_predict:
+  type: pandas.CSVDataset
+  filepath: data/04_prediction/data_predict.csv
+
+
