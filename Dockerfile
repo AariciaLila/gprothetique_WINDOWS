@@ -30,4 +30,4 @@ RUN mkdir -p /home/kedro_docker/mlruns && chmod -R 777 /home/kedro_docker/mlruns
 
 EXPOSE 8888
 
-CMD ["kedro", "run"]
+CMD ["python", "index.py"]

@@ -1,1 +1,1 @@
-{"data": {"rows": 6, "columns": 7, "file_size": 312}, "data_predict": {"rows": 6, "columns": 7, "file_size": 902}}
+{"data": {"rows": 3, "columns": 7, "file_size": 243}, "data_predict": {"rows": 3, "columns": 7, "file_size": 519}, "raw_data": {"rows": 10000, "columns": 14}, "cleaned_data": {"rows": 6111, "columns": 14}, "normalized_data": {"rows": 6111, "columns": 14}, "train_data": {"rows": 4888, "columns": 14, "file_size": 1349152}, "test_data": {"rows": 1223, "columns": 14, "file_size": 337514}}
