@@ -1,3 +1,6 @@
+import mlflow
+mlflow.set_tracking_uri("file:///home/kedro_docker/mlruns")
+
 from flask import Flask, request, jsonify
 from kedro.framework.startup import bootstrap_project
 from kedro.framework.session import KedroSession
@@ -59,5 +62,3 @@ def predict():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5002, debug=True)
-
-

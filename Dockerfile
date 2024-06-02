@@ -24,9 +24,10 @@ COPY --chown=${KEDRO_UID}:${KEDRO_GID} . .
 
 # Ensure the data directory is copied correctly
 COPY --chown=${KEDRO_UID}:${KEDRO_GID} data /home/kedro_docker/data
+COPY --chown=${KEDRO_UID}:${KEDRO_GID} data /home/kedro_docker/mlruns
 
 # Create the mlruns directory and set permissions
-RUN mkdir -p /home/kedro_docker/mlruns && chmod -R 777 /home/kedro_docker/mlruns
+#RUN mkdir -p /home/kedro_docker/mlruns && chmod -R 777 /home/kedro_docker/mlruns
 
 EXPOSE 5002
 

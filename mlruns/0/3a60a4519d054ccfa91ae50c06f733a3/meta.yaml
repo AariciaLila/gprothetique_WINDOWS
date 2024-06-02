@@ -1,4 +1,4 @@
-artifact_uri: file:///C:/Users/aa-dz/OneDrive/Bureau/Master2/10_-_Industrialisation/gprothetique-main%20%281%29/gprothetique/mlruns/0/3a60a4519d054ccfa91ae50c06f733a3/artifacts
+artifact_uri: file:///home/kedro_docker/mlruns/0/3a60a4519d054ccfa91ae50c06f733a3/artifacts
 end_time: 1717005372491
 entry_point_name: ''
 experiment_id: '0'
