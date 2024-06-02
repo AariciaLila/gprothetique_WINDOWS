@@ -28,6 +28,6 @@ COPY --chown=${KEDRO_UID}:${KEDRO_GID} data /home/kedro_docker/data
 # Create the mlruns directory and set permissions
 RUN mkdir -p /home/kedro_docker/mlruns && chmod -R 777 /home/kedro_docker/mlruns
 
-EXPOSE 8888
+EXPOSE 5002
 
 CMD ["python", "index.py"]
